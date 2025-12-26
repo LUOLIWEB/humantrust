@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificação HumanTrust</title>
+    <link rel="stylesheet" href="assets/03_styles.css">
+</head>
+<body>
+
+<h1>Verificação de Certificado HumanTrust</h1>
+
+<p>Insira o código do certificado ou escaneie o QR Code:</p>
+
+<input type="text" id="certCode" placeholder="Código do certificado">
+<button onclick="verificarCertificado()">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+function verificarCertificado() {
+    const code = document.getElementById("certCode").value.trim();
+    fetch("data/01_certificates.json")
+        .then(res => res.json())
+        .then(data => {
+            if(data[code]) {
+                document.getElementById("resultado").innerText =
+                    "✅ Certificado válido. Autenticidade confirmada em " + data[code];
+            } else {
+                document.getElementById("resultado").innerText =
+                    "❌ Certificado inválido ou não encontrado.";
+            }
+        });
+}
+</script>
+
+</body>
+</html>
