@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#editor {
+    width: 90%;
+    height: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}

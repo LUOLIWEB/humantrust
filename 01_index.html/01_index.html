@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>HumanTrust - Editor</title>
+<link rel="stylesheet" href="assets/03_styles.css">
+</head>
+<body>
+    <header>
+        <h1>HumanTrust Editor</h1>
+        <p>Crie seu TCC, artigo ou livro com autenticação humana.</p>
+    </header>
+
+    <div class="botoes">
+        <button onclick="iniciarGravacao()">Iniciar Gravação</button>
+        <button onclick="pararGravacao()">Parar e Analisar</button>
+        <button onclick="gerarPDF()">Gerar PDF</button>
+    </div>
+
+    <div id="editor" contenteditable="true">
+        Digite seu texto aqui...
+    </div>
+
+    <footer>
+        <p>© 2025 HumanTrust - Autenticidade Humana Garantida</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/01_script.js"></script>
+    <script src="assets/04_generateManualPDF.js"></script>
+</body>
+</html>
